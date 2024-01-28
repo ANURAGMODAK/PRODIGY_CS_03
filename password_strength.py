@@ -1,7 +1,6 @@
 import re
 
 def check_password_strength(password):
-    # Define criteria for password strength
     length_error = len(password) < 8
     digit_error = re.search(r"\d", password) is None
     uppercase_error = re.search(r"[A-Z]", password) is None
@@ -24,9 +23,6 @@ def check_password_strength(password):
 
 
 if __name__ == "__main__":
-    # Input password from user
     password = input("Enter your password: ")
-
-    # Check password strength
     strength_feedback = check_password_strength(password)
     print(strength_feedback)
